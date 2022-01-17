@@ -6,6 +6,8 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.WeatheringCopper;
 
+import static com.loucaskreger.oxidized.entity.CopperGolemEntityModel.COPPER_GOLEM_LAYER;
+
 public class CopperGolemEntityRenderer extends MobRenderer<CopperGolemEntity, CopperGolemEntityModel> {
     private static final ResourceLocation UNAFFECTED = new ResourceLocation("oxidized", "textures/entity/copper_golem.png");
     private static final ResourceLocation EXPOSED = new ResourceLocation("oxidized", "textures/entity/exposed_copper_golem.png");
@@ -14,7 +16,7 @@ public class CopperGolemEntityRenderer extends MobRenderer<CopperGolemEntity, Co
 
 
     public CopperGolemEntityRenderer(EntityRendererProvider.Context context) {
-        super(context, new CopperGolemEntityModel(context.getModelSet().bakeLayer(Oxidized.COPPER_GOLEM_LAYER)), 0.25F);
+        super(context, new CopperGolemEntityModel(context.getModelSet().bakeLayer(COPPER_GOLEM_LAYER)), 0.25F);
     }
 
     @Override

@@ -27,6 +27,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import java.util.Arrays;
 
+import static com.loucaskreger.oxidized.entity.CopperGolemEntityModel.COPPER_GOLEM_LAYER;
+
 
 @Mod(Oxidized.MOD_ID)
 public class Oxidized {
@@ -74,7 +76,6 @@ public class Oxidized {
         event.registerEntityRenderer(EntityTypeRegistry.COPPER_GOLEM.get(), CopperGolemEntityRenderer::new);
     }
 
-    public static final ModelLayerLocation COPPER_GOLEM_LAYER = new ModelLayerLocation(new ResourceLocation(Oxidized.MOD_ID, "copper_golem_layer"), "copper_golem_layer");
 
     public void registerEntityModel(final EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(COPPER_GOLEM_LAYER, CopperGolemEntityModel::getTexturedModelData);

@@ -6,10 +6,10 @@ license="GNU General Public License v3.0"
 modId="oxidized" 
 version="${file.jarVersion}"
 displayName="Oxidized" 
-displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/oxidized-forge"
 logoFile="icon.png"
-credits="Thanks for this example mod goes to Java"
-authors="Love, Cheese and small house plants"
+credits="zacthornetv for the rose gold tool textures"
+authors="AreUThreateningMe, safrodev"
 description='''
 '''
 [[dependencies.oxidized]]
@@ -19,7 +19,7 @@ description='''
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.oxidized]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.1,1.19)"
