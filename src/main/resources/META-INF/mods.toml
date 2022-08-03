@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[39,)"
+license = "GNU General Public License v3.0"
+
+[[mods]]
+modId = "oxidized"
+version = "${file.jarVersion}"
+displayName = "Oxidized"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/oxidized-forge"
+logoFile = "icon.png"
+credits = "zacthornetv for the rose gold tool textures"
+authors = "AreUThreateningMe, safrodev"
+description = '''
+'''
+[[dependencies.oxidized]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.oxidized]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,1.19)"
+ordering = "NONE"
+side = "BOTH"
