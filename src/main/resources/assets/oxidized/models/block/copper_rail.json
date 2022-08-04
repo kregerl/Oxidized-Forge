@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/rail_flat",
+  "render_type": "cutout_mipped",
+  "textures": {
+    "rail": "oxidized:block/copper_rail"
+  }
+}
