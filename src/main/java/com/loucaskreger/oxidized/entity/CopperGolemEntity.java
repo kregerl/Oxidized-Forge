@@ -124,7 +124,7 @@ public class CopperGolemEntity extends AbstractGolem {
             this.degradeLevel();
             this.level.playSound(player, player.getOnPos(), SoundEvents.AXE_SCRAPE, SoundSource.BLOCKS, 1.0F, 1.0F);
             this.level.levelEvent(player, 3005, player.getOnPos(), 0);
-            stack.hurt(1, this.random, (ServerPlayer) player);
+            stack.m_41629_(1, this.random, (ServerPlayer) player);
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;

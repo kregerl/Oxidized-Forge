@@ -51,8 +51,8 @@ public class OxidizableBlock extends Block implements WeatheringCopper {
     }
 
     @Override
-    public void randomTick(BlockState state, ServerLevel serverWorld, BlockPos pos, Random random) {
-        this.onRandomTick(state, serverWorld, pos, random);
+    public void m_7100_(BlockState state, Level serverWorld, BlockPos pos, Random random) {
+        this.m_7100_(state, serverWorld, pos, random);
     }
 
     @Override

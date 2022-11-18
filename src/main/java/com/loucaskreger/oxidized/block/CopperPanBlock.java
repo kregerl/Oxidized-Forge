@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
@@ -40,12 +41,10 @@ public class CopperPanBlock extends Block implements SimpleWaterloggedBlock {
     }
 
 
-
-
     @Override
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    public void m_7100_(BlockState state, Level world, BlockPos pos, Random random) {
         int i = state.getValue(PANNED);
-        if (state.getFluidState().is(FluidTags.WATER) && isSpecialBlockBelow(world, pos)) {
+        if (state.getFluidState().is(Fluids.WATER.defaultFluidState().getType()) && isSpecialBlockBelow(world, pos)) {
             if (i < 2) {
                 world.setBlock(pos, state.setValue(PANNED, i + 1), 2);
             } else {
@@ -59,8 +58,6 @@ public class CopperPanBlock extends Block implements SimpleWaterloggedBlock {
             }
         }
     }
-
-
     public Item getPannedItem(Random random) {
         if (random.nextFloat() <= OxidizedConfig.ironNuggetChance.get()) {
             return Items.IRON_NUGGET;
@@ -82,7 +79,7 @@ public class CopperPanBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     public static boolean isBlock(LevelAccessor world, BlockPos pos) {
-        return world.getBlockState(pos).is(BlockTags.SAND) || world.getBlockState(pos).is(Blocks.GRAVEL);
+        return BlockTags.SAND.m_6497_().stream().anyMatch(b -> world.getBlockState(pos).is(b)) || world.getBlockState(pos).is(Blocks.GRAVEL);
     }
 
     @Override
