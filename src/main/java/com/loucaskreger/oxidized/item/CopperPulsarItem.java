@@ -29,12 +29,12 @@ public class CopperPulsarItem extends Item {
         if (!level.isClientSide() && isActive(stack)) {
             ServerPlayer player = (ServerPlayer) entity;
 
-            List<ItemEntity> entityItems = player.level.getEntitiesOfClass(ItemEntity.class, player.getBoundingBox().inflate(OxidizedConfig.pulsarReach.get()), Entity::isAlive);
+            List<ItemEntity> entityItems = player.level.getEntitiesOfClass(ItemEntity.class, player.getBoundingBoxForCulling().inflate(OxidizedConfig.pulsarReach.get()), Entity::isAlive);
             for (ItemEntity entityItemNearby : entityItems) {
                 entityItemNearby.playerTouch(player);
             }
 
-            List<ExperienceOrb> entityXP = player.level.getEntitiesOfClass(ExperienceOrb.class, player.getBoundingBox().inflate(OxidizedConfig.pulsarReach.get()), Entity::isAlive);
+            List<ExperienceOrb> entityXP = player.level.getEntitiesOfClass(ExperienceOrb.class, player.getBoundingBoxForCulling().inflate(OxidizedConfig.pulsarReach.get()), Entity::isAlive);
             for (ExperienceOrb entityXPNearby : entityXP) {
                 entityXPNearby.playerTouch(player);
             }

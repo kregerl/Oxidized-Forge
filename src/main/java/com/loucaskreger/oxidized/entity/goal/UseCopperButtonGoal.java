@@ -34,7 +34,7 @@ public class UseCopperButtonGoal extends MoveToBlockGoal {
     public void tick() {
         if (this.isReachedTarget()) {
             this.golem.setPressingButtons(true);
-            if (Mth.nextInt(golem.getRandom(), 1, OxidizedConfig.copperGolemButtonProbability.get()) == 2) {
+            if (Mth.m_14072_(golem.getCommandSenderWorld().random, 1, OxidizedConfig.copperGolemButtonProbability.get()) == 2) {
                 BlockState state = this.golem.level.getBlockState(this.blockPos);
                 ((CopperButton) state.getBlock()).press(state, this.golem.level, this.getMoveToTarget());
             }

@@ -64,7 +64,7 @@ public class CopperKilnBlock extends AbstractFurnaceBlock {
     }
 
     @Override
-    public void animateTick(BlockState state, Level world, BlockPos pos, Random random) {
+    public void m_7100_(BlockState state, Level world, BlockPos pos, Random random) {
         if (state.getValue(LIT)) {
             double x = pos.getX() + 0.5D;
             double y = pos.getY();
